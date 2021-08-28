@@ -1,8 +1,15 @@
 setTimeout(() => {
   console.log('setTimeout()')
-}, 100)
+},0)
 
-console.log('global')
+setImmediate(() => {
+  console.log('setImmediate()')
+})
 
-const end = (new Date()).getTime() + 3000
-while ((new Date()).getTime() < end) { }
+process.nextTick(() => {
+  console.log('nextTick()')
+})
+
+Promise.resolve().then(() => {
+  console.log('Proise.resolve().then()')
+})
