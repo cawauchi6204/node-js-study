@@ -1,6 +1,10 @@
-let sum = 0
-console.time("timer1")
-for (let i = 1;i <= 100000; i++) {
-  sum += i;
-}
-console.timeEnd("timer1")
+// console.log('indexの1行目のprocess.envは' + JSON.stringify(process.env, null, 2))
+
+// for (let i = 0; i < process.argv.length; i++) {
+//   console.log(`${i} : ${process.argv[i]}`)
+// }
+
+// console.log(`${process.cwd()}`)
+// console.log(`${__dirname}`)
+
+console.log(process.platform)
