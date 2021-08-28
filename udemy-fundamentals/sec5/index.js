@@ -1,15 +1,4 @@
-setTimeout(() => {
-  console.log('setTimeout()')
-},0)
+console.log('hello')
+console.trace('world')
 
-setImmediate(() => {
-  console.log('setImmediate()')
-})
-
-process.nextTick(() => {
-  console.log('nextTick()')
-})
-
-Promise.resolve().then(() => {
-  console.log('Proise.resolve().then()')
-})
+console.log('Message: %o',{hello: "world"})
