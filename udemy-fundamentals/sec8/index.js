@@ -1,10 +1,12 @@
-const Clock = require('./clock')
-let i = 0
-const clock = new Clock()
-clock.on('tick', () => {
-  console.log(++i)
-  if (i > 3) {
-    clock.stop()
-  }
+const EventEmitter = require("events")
+
+const ee = new EventEmitter()
+ee.on('event', function () {
+  console.log(('function : \r\n', this))
 })
-clock.start()
+
+ee.on('event', () => {
+  console.log(('function : \r\n', this))
+})
+
+ee.emit('event')
